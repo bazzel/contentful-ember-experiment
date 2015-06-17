@@ -5,6 +5,7 @@ export default DS.RESTSerializer.extend({
     var posts = payload.items.map(function(item) {
       var post = Ember.$.extend(true, {}, item.fields);
       post.id = item.sys.id;
+      post.author = post.author[0].sys.id;
       return post;
     });
 
