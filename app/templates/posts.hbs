@@ -1,8 +1,8 @@
-<ul>
-  {{#each}}
-  <li><h2>{{title}}</h2>
+{{#each model key='id'}}
+<article>
+  <h2>{{title}}</h2>
 
-  {{markdown-to-html markdown=body}}</li>
-  {{/each}}
-</ul>
-
+  {{markdown-to-html markdown=body}}
+</article>
+<hr/>
+{{/each}}
