@@ -1,4 +1,11 @@
-<div class="container">
-  {{outlet}}
+<div class='container'>
+  <div class="row">
+    <div class="col-sm-8">
+      {{outlet}}
+    </div>
+    <div class="col-sm-3">
+      {{outlet 'sidebar'}}
+    </div>
+  </div>
 </div>
 
