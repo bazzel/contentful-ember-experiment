@@ -1,0 +1,13 @@
+<div class="post-preview">
+  {{#link-to 'post' post}}
+    <h2 class="post-title">
+      {{post.title}}
+    </h2>
+    {{#if post.subtitle}}
+      <h3 class="post-subtitle">
+        {{post.subtitle}}
+      </h3>
+    {{/if}}
+    {{/link-to}}
+  <p class="post-meta">Posted by <a href="#">{{post.authorName}}</a> on {{moment post.date 'LL'}}</p>
+</div>

@@ -1,0 +1,26 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img alt="Brand" src="assets/images/logo.png" class='logo'></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="http://kabisa.nl/">Home</a></li>
+        <li><a href="http://kabisa.nl/over-kabisa/">Over Kabisa</a></li>
+        <li><a href="http://kabisa.nl/portfolio/">Portfolio</a></li>
+        <li><a href="http://kabisa.nl/werken-bij/">Werken bij</a></li>
+        {{#link-to 'posts' tagName='li' href=false}}
+          {{#link-to 'posts' bubbles=false}}Blog{{/link-to}}
+        {{/link-to}}
+        <li><a href="http://kabisa.nl/nieuws/">Nieuws</a></li>
+        <li><a href="http://kabisa.nl/contact/">Contact</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>

@@ -1,9 +1,3 @@
 {{#each model key='id' as |post|}}
-<article>
-  <h2>{{post.title}}</h2>
-  <div>By {{post.authorName}}</div>
-
-  {{markdown-to-html markdown=post.body}}
-</article>
-<hr/>
+{{blog-post post=post}}
 {{/each}}
