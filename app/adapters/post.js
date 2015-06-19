@@ -1,5 +1,5 @@
-import ContentfulBase from './contentful-base';
+import ContentfulAdapter from './contentful-adapter';
 
-export default ContentfulBase.extend({
+export default ContentfulAdapter.extend({
   contentTypeId: '2wKn6yEnZewu2SCCkus4as'
 });
