@@ -10,7 +10,7 @@ export default Ember.Route.extend({
     this.controllerFor('categories').set('model', model.categories);
   },
   renderTemplate: function() {
-    this.render('application');
+    this._super();
     this.render('categories', {
       into: 'application',
       outlet: 'sidebar',
