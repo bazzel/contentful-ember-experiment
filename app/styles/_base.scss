@@ -1,5 +1,15 @@
 @import 'bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400italic,400,700,700italic|Merriweather+Sans:400,400italic,700,700italic,300italic,300);
 
 body {
   padding-top: 70px;
+}
+
+p {
+  margin: 0 0 $line-height-computed;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

@@ -1,1 +1,23 @@
-<h1>{{title}}</h1>
+<div class="jumbotron landing">
+  <div class="container">
+    <h1>{{title}}</h1>
+    {{#if subtitle}}
+      <h3 class="post-subtitle">
+        {{subtitle}}
+      </h3>
+    {{/if}}
+    <p class="post-meta">Geschreven door {{authorName}} op {{moment post.date 'LL'}}</p>
+  </div>
+</div>
+<div class='container'>
+  <div class="row">
+    <div class="col-sm-8">
+      <h1>{{title}}</h1>
+      {{markdown-to-html markdown=body}}
+    </div>
+    <div class="col-sm-3">
+      {{outlet 'sidebar'}}
+    </div>
+  </div>
+</div>
+
