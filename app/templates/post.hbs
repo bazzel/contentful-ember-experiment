@@ -1,19 +1,19 @@
 <div class="jumbotron landing">
   <div class="container">
-    <h1>{{title}}</h1>
-    {{#if subtitle}}
+    <h1>{{model.title}}</h1>
+    {{#if model.subtitle}}
       <h3 class="post-subtitle">
-        {{subtitle}}
+        {{model.subtitle}}
       </h3>
     {{/if}}
-    <p class="post-meta">Geschreven door {{authorName}} op {{moment post.date 'LL'}}</p>
+    <p class="post-meta">Geschreven door {{model.authorName}} op {{moment model.date 'LL'}}</p>
   </div>
 </div>
 <div class='container'>
   <div class="row">
     <div class="col-sm-8">
       <h1>{{title}}</h1>
-      {{markdown-to-html markdown=body}}
+      {{markdown-to-html markdown=model.body}}
     </div>
     <div class="col-sm-3">
       {{outlet 'sidebar'}}
