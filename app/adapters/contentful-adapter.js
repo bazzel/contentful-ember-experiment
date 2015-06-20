@@ -9,7 +9,7 @@ export default DS.RESTAdapter.extend({
     var url = 'https://cdn.contentful.com/spaces/' + this.spaceId + '/entries?content_type=' + this.contentTypeId + '&access_token=' + this.accessToken;
     return ajax(url);
   },
-  find: function(store, type, id, snapshot) {
+  find: function(store, type, id) {
     var url = 'https://cdn.contentful.com/spaces/' + this.spaceId + '/entries/' + id + '?access_token=' + this.accessToken;
     return ajax(url);
   }
