@@ -1,6 +1,6 @@
-<h1>Categories</h1>
-<ul>
+<h3>Categories</h3>
+<ul class='nav nav-pills nav-stacked'>
   {{#each model key='id' as |category|}}
-    <li>{{category.title}}</li>
+  <li><a href='#'>{{category.title}}</a></li>
   {{/each}}
 </ul>
