@@ -7,5 +7,6 @@ export default DS.Model.extend({
   body: DS.attr('string'),
   authors: DS.hasMany('author', { async: true }),
   authorNames: Ember.computed.mapBy('authors', 'name'),
-  date: DS.attr('date')
+  date: DS.attr('date'),
+  featuredImage: DS.belongsTo('featuredImage', { async: true })
 });

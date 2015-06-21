@@ -9,6 +9,7 @@ export default DS.RESTSerializer.extend({
       post.authors = post.author.map(function(item) {
         return item.sys.id;
       });
+      post.featuredImage = post.featuredImage != null && post.featuredImage.sys.id;
       return post;
     });
 
@@ -23,6 +24,7 @@ export default DS.RESTSerializer.extend({
     post.authors = post.author.map(function(item) {
       return item.sys.id;
     });
+    post.featuredImage = post.featuredImage != null && post.featuredImage.sys.id;
 
     var payload = {};
     payload[primaryTypeClass.modelName] = post;
