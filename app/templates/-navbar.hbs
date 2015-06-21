@@ -16,7 +16,7 @@
         <li><a href="http://kabisa.nl/portfolio/">Portfolio</a></li>
         <li><a href="http://kabisa.nl/werken-bij/">Werken bij</a></li>
         {{#link-to 'posts' tagName='li' href=false}}
-          {{#link-to 'posts' bubbles=false}}Blog{{/link-to}}
+          {{#link-to 'posts' (query-params category='null') bubbles=false}}Blog{{/link-to}}
         {{/link-to}}
         <li><a href="http://kabisa.nl/nieuws/">Nieuws</a></li>
         <li><a href="http://kabisa.nl/contact/">Contact</a></li>

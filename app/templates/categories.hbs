@@ -1,6 +1,7 @@
 <h3>Categories</h3>
-<ul class='nav nav-pills nav-stacked'>
+<div class='list-group'>
+  {{#link-to 'posts' (query-params category='null') class='list-group-item'}}Alle{{/link-to}}
   {{#each model key='id' as |category|}}
-  <li><a href='#'>{{category.title}}</a></li>
+  {{#link-to 'posts' (query-params category=category.title) class='list-group-item'}}{{category.title}}{{/link-to}}
   {{/each}}
-</ul>
+</div>
