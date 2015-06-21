@@ -13,5 +13,13 @@ export default DS.RESTSerializer.extend({
     payload[type.modelName] = categories;
 
     return this._super(store, type, payload);
+  },
+  extractSingle: function(store, primaryTypeClass, rawPayload, recordId) {
+    var category = rawPayload.fields;
+    category.id = rawPayload.sys.id;
+
+    var payload = {};
+    payload[primaryTypeClass.modelName] = category;
+    return this._super(store, primaryTypeClass, payload, recordId);
   }
 });
