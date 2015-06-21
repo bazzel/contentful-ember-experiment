@@ -9,5 +9,5 @@
       </h3>
     {{/if}}
     {{/link-to}}
-  <p class="post-meta">Geschreven door <a href="#">{{post.authorName}}</a> op {{moment post.date 'LL'}}</p>
+    <p class="post-meta">Geschreven door {{to-sentence words=post.authorNames}} op {{moment post.date 'LL'}}</p>
 </div>

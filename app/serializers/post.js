@@ -6,7 +6,9 @@ export default DS.RESTSerializer.extend({
     var posts = payload.items.map(function(item) {
       var post = Ember.$.extend(true, {}, item.fields);
       post.id = item.sys.id;
-      post.author = post.author[0].sys.id;
+      post.authors = post.author.map(function(item) {
+        return item.sys.id;
+      });
       return post;
     });
 
@@ -18,7 +20,9 @@ export default DS.RESTSerializer.extend({
   extractSingle: function(store, primaryTypeClass, rawPayload, recordId) {
     var post = rawPayload.fields;
     post.id = rawPayload.sys.id;
-    post.author = post.author[0].sys.id;
+    post.authors = post.author.map(function(item) {
+      return item.sys.id;
+    });
 
     var payload = {};
     payload[primaryTypeClass.modelName] = post;

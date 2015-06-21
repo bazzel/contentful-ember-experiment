@@ -6,7 +6,7 @@
         {{model.subtitle}}
       </h3>
     {{/if}}
-    <p class="post-meta">Geschreven door {{model.authorName}} op {{moment model.date 'LL'}}</p>
+    <p class="post-meta">Geschreven door {{to-sentence words=model.authorNames}} op {{moment model.date 'LL'}}</p>
   </div>
 </div>
 <div class='container'>
@@ -20,4 +20,3 @@
     </div>
   </div>
 </div>
-
