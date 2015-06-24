@@ -5,10 +5,9 @@ export default DS.RESTSerializer.extend({
   extractArray: function(store, type, payload) {
     var authors    = [],
         categories = [],
-        _this      = this,
         entries    = payload.includes.Entry,
-        posts      = payload.items.map(function(item) {
-      return _this._extractPost(item, authors, categories, entries);
+        posts      = payload.items.map((item) => {
+      return this._extractPost(item, authors, categories, entries);
     });
 
     payload = {
