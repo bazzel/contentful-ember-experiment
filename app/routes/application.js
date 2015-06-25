@@ -1,6 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  i18n: Ember.inject.service(),
+  actions: {
+    setLocale: function(locale) {
+      this.set('i18n.locale', locale);
+    }
+  }
   //model: function() {
     //return Ember.RSVP.hash({
       //categories: this.store.find('category')

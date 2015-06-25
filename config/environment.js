@@ -25,6 +25,9 @@ module.exports = function(environment) {
       'img-src': "'self' *",
       'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
       'media-src': "'self'"
+    },
+    i18n: {
+      defaultLocale: 'nl'
     }
   };
 
